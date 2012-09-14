@@ -283,6 +283,15 @@ void ofxKinect::update() {
 }
 
 //------------------------------------
+void ofxKinect::setAutoExposure(bool autoExposure) {
+	if (autoExposure) {
+		freenect_autoexposure_on(kinectDevice);
+	} else {
+		freenect_autoexposure_off(kinectDevice);
+	}
+}
+
+//------------------------------------
 float ofxKinect::getDistanceAt(int x, int y) {
 	return depthPixelsRaw[y * width + x];
 }

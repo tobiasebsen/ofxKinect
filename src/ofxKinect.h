@@ -105,6 +105,9 @@ public:
 	/// make sure to call this to update to the latest incoming frames
 	void update();
 
+	/// sets the auto-exposure on the RGB camera
+	void setAutoExposure(bool autoExposure);
+
 /// \section Depth Data
 
 	/// get the calulated distance for a depth point
